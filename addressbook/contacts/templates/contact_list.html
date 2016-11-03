@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>LSA Address Book</h1> 
+<button class="btn-custom-add"><a href="{% url "contacts-new" %}">Add Contact</a></button>
+<div class="list">
+	<ul>
+		{% for contact in object_list %}
+			<li>
+				<a href="{{ contact.get_absolute_url }}">{{ contact.get_full_name }}</a>
+			</li>
+		{% empty %}
+			<p>There are currently no contacts in the address book.</p>
+		{% endfor %}
+	</ul>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if contact.id %}
+<h1>Edit {{contact.get_full_name}}</h1>
+{% else %}
+<h1>Add Contact</h1>
+{% endif %}
+
+<form action="{{ target }}" method="POST">
+	{% csrf_token %}
+	<p>
+		{{ form.as_p }}
+	</p>
+	<input type="submit" value="Save" class="btn-custom-save" />
+</form>
+
+{% endblock %}

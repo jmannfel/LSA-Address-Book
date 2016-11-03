@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div style="float:right; padding-top: 20px;">
+Logged out!
+<a href="{% url 'django.contrib.auth.views.login' %}">login</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ contact.get_full_name }}</h1>
+<p><b>First Name:</b> {{ contact.first_name }}</p>
+<p><b>Last Name:</b> {{ contact.last_name }}</p>
+<p><b>Phone:</b> {{ contact.phone }}</p>
+<p><b>Email:</b> {{ contact.email }}</p>
+<p><b>Address:</b> {{ contact.address }}</p>
+
+<button class="btn-custom-edit"><a href="{% url "contacts-edit" pk=contact.id %}">Edit</a></button>
+<button class="btn-custom-delete"><a href="{% url "contacts-delete" pk=contact.id %}">Delete</a></button>
+
+{% endblock %}
+

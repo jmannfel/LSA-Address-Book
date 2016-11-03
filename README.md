@@ -1,4 +1,4 @@
-# LSA-Addres-Book
+# LSA-Address-Book
 
 For simplicity, application uses sqlite3 for DB.
 Bootstrap.min.css included in static files.
